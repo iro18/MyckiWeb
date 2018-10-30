@@ -1,0 +1,28 @@
+mycki_homepage:
+    path:     /
+    defaults: { _controller: MyckiBundle:Default:index }
+
+#mycki_AddPage:
+    #path:     /add
+    #defaults: { _controller: MyckiBundle:Default:add }
+
+mycki_Pageblog:
+    path:     /blog
+    defaults: { _controller: MyckiBundle:Default:blogPage }
+
+mycki_PageContact:
+    path:     /contact
+    defaults: { _controller: MyckiBundle:Default:contactPage }
+
+mycki_portfolioPage:
+    path:     /portfolio/{slug}
+    defaults: { _controller: MyckiBundle:Default:portfoliopage }
+
+mycki_portfolio:
+    path:     /portfolio
+    defaults: { _controller: MyckiBundle:Default:portfolio }
+
+mycki_simplePage:
+    path:     /{slug}
+    defaults: { _controller: MyckiBundle:Default:simplepage }
+

@@ -1,0 +1,29 @@
+{% extends 'MyckiBundle::base.html.twig' %}
+{% block title %} Développeur web à Carcassonne - {{ parent() }} {% endblock %}
+{% block body %}
+    <div id="wrapper">
+
+        <div id="container">
+
+
+            <div style="clear:both"></div>
+            <div id="welcome">
+               <!--  <img id="testoune" src="images/cloud-309024_960_720.png" width="150" /> -->
+                  <h1>{{  yolo.getTitle }} </h1>
+
+            </div>
+
+            <div id="next">
+                {% autoescape false %}
+                {{  yolo.getContent|raw }}
+                {% endautoescape %}
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}

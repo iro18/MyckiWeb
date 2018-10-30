@@ -1,0 +1,33 @@
+{% extends 'MyckiBundle::base.html.twig' %}
+{% block title %}Blog - Développeur web à Carcassonne - {{ parent() }} {% endblock %}
+{% block body %}
+    <div id="wrapper">
+
+        <div id="container">
+
+
+            <div style="clear:both"></div>
+            <div id="welcome">
+                <h1> Dernières actualités MyckiWeb</h1>
+            </div>
+                <!--  <img id="testoune" src="images/cloud-309024_960_720.png" width="150" /> -->
+                {% for blog in allblog %}
+                <li>{{  blog.getTitle }} </li>
+
+                <img src="{{ imagepath }}/{{ blog.getImage }}" />
+
+            <div id="next">
+                {% autoescape false %}
+                    {{  blog.getContent|raw }}
+                {% endautoescape %}
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
